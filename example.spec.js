@@ -7,7 +7,6 @@ const page = await browser.newPage();
 //First('homepage has titile', async ({ page }) => {
 await page.goto('https://playwright.dev/');
 await expect(page).toHaveTitle(/Playwright/);
-console.log(await page.titile());
+console.log(await page.title());
 await browser.close();
-
 })();
