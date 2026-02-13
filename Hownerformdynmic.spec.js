@@ -1,4 +1,4 @@
-const{test,expect}=require('@playwright/test');{
+const{test,expect} = require('@playwright/test');{
 
 const {login} = require('./loginHelper');
 const {logout} = require('./logoutHelper');
@@ -26,7 +26,6 @@ await page.frameLocator('iframe[name="displayOld"]').locator('#btnNew').click();
 await expect(page.frameLocator('iframe[name="displayOld"]').getByRole('heading', { name: 'Primary Homeowner Information' })).toBeVisible({ timeout: 15000 }); 
 
 await page.frameLocator('iframe[name="displayOld"]').locator('select[id="numPropertyStatusID"]').selectOption('17');
-
 
 
 });   
